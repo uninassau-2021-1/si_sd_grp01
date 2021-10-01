@@ -1,0 +1,31 @@
+{
+  "name": "webservice",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www --trace-warnings –trace-sync-io",
+    "clearModules": "rd /s /q node_modules",
+    "installModules": "npm install",
+    "clearDocs": "rd /s /q docs",
+    "jsdoc": "jsdoc -d docs --debug --verbose -r -e utf8 %cd%",
+    "docs": "npm run clearDocs & npm run clearModules & npm run jsdoc & npm run installModules",
+    "sendGit": "git add . & git commit -m 'Envio automático' & git push origin main"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "ip": "^1.1.5",
+    "jade": "~1.11.0",
+    "moment": "^2.29.1",
+    "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "node-sass-middleware": "0.11.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.6.7",
+    "nodemon": "^2.0.12"
+  }
+}
